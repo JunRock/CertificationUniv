@@ -2,10 +2,10 @@ package io.junseok.authuniversity.service.univmail;
 
 import io.junseok.authuniversity.config.mail.SendMailService;
 import io.junseok.authuniversity.config.mail.dto.UnivMailDto;
-import jakarta.mail.MessagingException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import javax.mail.MessagingException;
 import java.text.MessageFormat;
 
 import static io.junseok.authuniversity.domain.University.getDomainByName;

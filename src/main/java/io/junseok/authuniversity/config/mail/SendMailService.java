@@ -1,12 +1,13 @@
 package io.junseok.authuniversity.config.mail;
 
 import io.junseok.authuniversity.config.mail.dto.UnivMailDto;
-import jakarta.mail.MessagingException;
-import jakarta.mail.internet.MimeMessage;
 import lombok.RequiredArgsConstructor;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
+
+import javax.mail.MessagingException;
+import javax.mail.internet.MimeMessage;
 
 @Service
 @RequiredArgsConstructor
@@ -24,7 +25,6 @@ public class SendMailService {
                         "<br/>인증번호 입니다." +
                         "<br/>인증번호 :   <h2>" + tempPassword + "</h2>")
                 .build();
-
     }
     public String getTempPassword() {
         char[] charSet = new char[]{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F',
