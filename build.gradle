@@ -5,7 +5,6 @@ plugins {
 	id 'maven-publish'
 }
 
-
 java {
 	sourceCompatibility = '11'
 }
@@ -14,9 +13,9 @@ publishing {
 	publications {
 		mavenJava(MavenPublication) {
 			from components.java
-			groupId = 'com.github.JunRock'
-			artifactId = 'CertificationUniv'
-			version = '1.0.4'
+			groupId = 'com.github.JunRock' as Publication
+			artifactId = 'CertificationUniv' as Publication
+			version = '0.0.1' as Publication
 		}
 	}
 }
@@ -35,10 +34,13 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
+	//implementation 'org.springframework.boot:spring-boot-starter'
+	//testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	//implementation 'org.springframework.boot:spring-boot-starter-validation'
+	//implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
-	implementation 'com.github.jitpack:gradle-simple:1.0'
+	implementation 'com.github.jitpack:gradle-simple:1.1'
 	implementation 'org.springframework.boot:spring-boot-starter-mail'
 }
 
