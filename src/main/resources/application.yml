@@ -1,0 +1,12 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 465
+    username: seoulcafecheckin@gmail.com
+    password: eckakmucntyhuaze
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+          auth: true
