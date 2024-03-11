@@ -5,9 +5,6 @@ plugins {
 	id 'maven-publish'
 }
 
-group = 'io.junseok'
-version = '0.0.1-SNAPSHOT'
-
 java {
 	sourceCompatibility = '8'
 }
