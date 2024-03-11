@@ -7,7 +7,7 @@ plugins {
 
 
 java {
-	sourceCompatibility = 11
+	sourceCompatibility = '11'
 }
 
 publishing {
@@ -16,7 +16,7 @@ publishing {
 			from components.java
 			groupId = 'com.github.JunRock'
 			artifactId = 'CertificationUniv'
-			version = '1.0.3'
+			version = '1.0.4'
 		}
 	}
 }
