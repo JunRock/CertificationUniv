@@ -1,19 +1,38 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.2.3'
+	id 'org.springframework.boot' version '2.7.13'
 	id 'io.spring.dependency-management' version '1.1.4'
+	id 'maven-publish'
 }
 
 group = 'io.junseok'
 version = '0.0.1-SNAPSHOT'
 
 java {
-	sourceCompatibility = '17'
+	sourceCompatibility = '8'
 }
 
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			from components.java
+			groupId = 'com.github.JunRock'
+			artifactId = 'CertificationUniv'
+			version = '0.0.1'
+		}
+	}
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
 
 repositories {
 	mavenCentral()
+	maven { url "https://jitpack.io" }
+	google()
 }
 
 dependencies {
@@ -23,6 +42,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+	implementation 'com.github.jitpack:gradle-simple:1.0'
 	implementation 'org.springframework.boot:spring-boot-starter-mail'
 }
 
