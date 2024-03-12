@@ -1,13 +1,13 @@
 plugins {
-	id 'java'
+	id 'java-library'
 	id 'org.springframework.boot' version '2.7.13'
 	id 'io.spring.dependency-management' version '1.1.4'
 	id 'maven-publish'
 }
 
 java {
-	sourceCompatibility = '1.8' // Java 11로 변경
-	targetCompatibility = '1.8' // Java 11로 변경
+	sourceCompatibility = '8' // Java 11로 변경
+	targetCompatibility = '8' // Java 11로 변경
 }
 
 publishing {
@@ -16,7 +16,7 @@ publishing {
 			from components.java
 			groupId = 'com.github.JunRock'
 			artifactId = 'CertificationUniv'
-			version = 'v0.0.7'
+			version = 'v0.0.8'
 		}
 	}
 }
@@ -30,7 +30,6 @@ configurations {
 repositories {
 	mavenCentral()
 	maven { url "https://jitpack.io" }
-	google()
 }
 
 dependencies {
