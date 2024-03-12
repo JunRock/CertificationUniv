@@ -6,7 +6,7 @@ plugins {
 }
 
 java {
-	sourceCompatibility = '11'
+	sourceCompatibility = '8'
 }
 
 publishing {
@@ -15,7 +15,7 @@ publishing {
 			from components.java
 			groupId = 'com.github.JunRock'
 			artifactId = 'CertificationUniv'
-			version = '0.0.1'
+			version = '0.0.2'
 		}
 	}
 }
@@ -39,7 +39,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
-	implementation 'com.github.jitpack:gradle-simple:1.0'
+	implementation 'com.github.jitpack:gradle-simple:1.1'
 	implementation 'org.springframework.boot:spring-boot-starter-mail'
 }
 
