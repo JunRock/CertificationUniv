@@ -1,28 +1,55 @@
 plugins {
-	id 'java'
-	id 'org.springframework.boot' version '3.2.3'
+	id 'java-library'
+	id 'org.springframework.boot' version '2.7.13'
 	id 'io.spring.dependency-management' version '1.1.4'
+	id 'maven-publish'
 }
-
-group = 'io.junseok'
+group = 'com.github.JunRock'
 version = '0.0.1-SNAPSHOT'
 
 java {
-	sourceCompatibility = '17'
+	sourceCompatibility = '8' // Java 11로 변경
+	targetCompatibility = '8' // Java 11로 변경
+}
+
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			from components.java
+			groupId = 'com.github.JunRock'
+			artifactId = 'CertificationUniv'
+			version = '1.1'
+		}
+	}
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
 }
 
 repositories {
 	mavenCentral()
+	maven { url "https://jitpack.io" }
 }
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	//testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	//implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+	implementation 'com.github.jitpack:gradle-simple:1.1'
 	implementation 'org.springframework.boot:spring-boot-starter-mail'
+}
+
+bootJar {
+	enabled = false
+}
+jar {
+	enabled = true
 }
 
 tasks.named('test') {

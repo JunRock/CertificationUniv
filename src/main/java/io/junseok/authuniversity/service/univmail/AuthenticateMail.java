@@ -2,10 +2,12 @@ package io.junseok.authuniversity.service.univmail;
 
 import io.junseok.authuniversity.config.mail.SendMailService;
 import io.junseok.authuniversity.config.mail.dto.UnivMailDto;
-import jakarta.mail.MessagingException;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import javax.mail.MessagingException;
 import java.text.MessageFormat;
 
 import static io.junseok.authuniversity.domain.University.getDomainByName;
@@ -16,6 +18,8 @@ public class AuthenticateMail {
     private final UniversityMailValidService mailValidService;
     private final SendMailService sendMailService;
     private String certificationNumber;
+
+
     public String sendNumber(String email,String universityName) throws MessagingException { //실 서비스
         if (!mailValidService.checkMail(email))
             throw new IllegalStateException("이메일 검증 실패");
