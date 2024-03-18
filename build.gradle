@@ -18,7 +18,7 @@ publishing {
 			from components.java
 			groupId = 'com.github.JunRock'
 			artifactId = 'CertificationUniv'
-			version = '1.1'
+			version = '1.2'
 		}
 	}
 }
@@ -44,7 +44,7 @@ dependencies {
 	implementation 'com.github.jitpack:gradle-simple:1.1'
 	implementation 'org.springframework.boot:spring-boot-starter-mail'
 }
-jar {
+bootJar {
 	enabled = false
 }
 
