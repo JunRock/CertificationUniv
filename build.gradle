@@ -18,7 +18,7 @@ publishing {
 			from components.java
 			groupId = 'com.github.JunRock'
 			artifactId = 'CertificationUniv'
-			version = '1.5'
+			version = '1.6'
 		}
 	}
 }
@@ -32,6 +32,7 @@ configurations {
 repositories {
 	mavenCentral()
 	maven { url "https://jitpack.io" }
+	google()
 }
 
 dependencies {
