@@ -13,9 +13,9 @@ public class MailConfig {
     public JavaMailSender javaMailService() {
         JavaMailSenderImpl javaMailSender = new JavaMailSenderImpl();
 
-        javaMailSender.setHost("smtp.gmail.com");
-        javaMailSender.setUsername("seoulcafecheckin@gmail.com");
-        javaMailSender.setPassword("eckakmucntyhuaze");
+        javaMailSender.setHost("${spring.mail.host}");
+        javaMailSender.setUsername("${spring.mail.username}");
+        javaMailSender.setPassword("${spring.mail.password}");
 
         javaMailSender.setPort(465);
 
