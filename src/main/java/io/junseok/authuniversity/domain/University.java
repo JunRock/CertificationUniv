@@ -40,7 +40,6 @@ public enum University {
     UT("한국교통대학교","UT"), INJE("인제대학교","inje"), DIT("동의과학대학교","dit"),HANBAT("한밭대학교","hanbat"),
     HANSUNG("한성대학교","hansung"),SYUIN("삼육대학교","syuin"),KAU("한국항공대학교","kau"), SEOULARTS("서울예술대학교", "seoularts"),
     PUSAN("부산대학교","pusan"), SANGMYUNG("상명대학교","sangmyung");
-
     private final String name;
     private final String domain;
 

@@ -19,7 +19,6 @@ public class AuthenticateMail {
     private final SendMailService sendMailService;
     private String certificationNumber;
 
-
     public String sendNumber(String email,String universityName) throws MessagingException { //실 서비스
         if (!mailValidService.checkMail(email))
             throw new IllegalStateException("이메일 검증 실패");
