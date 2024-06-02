@@ -1,8 +1,5 @@
 package io.junseok.authuniversity.domain;
 
-import static io.junseok.exception.ErrorCode.NOT_EXIST_SCHOOL;
-
-import io.junseok.exception.DistanceException;
 import java.util.Collections;
 import java.util.EnumMap;
 import java.util.Map;
@@ -61,24 +58,4 @@ public enum University {
     }
 
     public final static Map<University,University> UNIV_MAP=createUnmodifiableMap();
-    /** TODO
-     *  Custom Exception 변경
-     */
-    public static String getDomainByName(String name) { //순천향대학교 -> sch 반환
-        for (Map.Entry<University, University> entry : UNIV_MAP.entrySet()) {
-            if (entry.getKey().getName().equals(name)) {
-                return entry.getKey().getDomain();
-            }
-        }
-        throw new DistanceException(NOT_EXIST_SCHOOL);
-    }
-
-    public static boolean getIsWomen(String name){
-        for(Map.Entry<University,University> entry : UNIV_MAP.entrySet()){
-            if(entry.getKey().getName().equals(name)){
-                return entry.getKey().isWomen;
-            }
-        }
-        throw new DistanceException(NOT_EXIST_SCHOOL);
-    }
 }
