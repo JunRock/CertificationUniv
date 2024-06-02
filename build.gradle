@@ -41,7 +41,6 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
-	implementation 'com.github.jitpack:gradle-simple:1.1'
 	implementation 'org.springframework.boot:spring-boot-starter-mail'
 }
 
