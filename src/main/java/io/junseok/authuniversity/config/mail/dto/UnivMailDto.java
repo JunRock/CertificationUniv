@@ -1,13 +1,14 @@
 package io.junseok.authuniversity.config.mail.dto;
 
-import lombok.*;
+import lombok.Builder;
 
-@Getter
-@AllArgsConstructor
-@NoArgsConstructor
+
 @Builder
-public class UnivMailDto {
-    private String mailAddress;
-    private String title;
-    private String message;
+public record UnivMailDto(
+    String mailAddress,
+    String title,
+    String message,
+    String tempPw
+) {
+
 }
